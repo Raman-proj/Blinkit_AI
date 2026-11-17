@@ -1,0 +1,39 @@
+/* Global Styles & Blinkit Color Variables */
+:root {
+  --primary-yellow: #f7d046;
+  --primary-yellow-hover: #e5bf3b;
+  --blinkit-green: #0c831f;
+  --blinkit-green-hover: #0a6f1a;
+  --blinkit-green-light: #e8f5e9;
+  --text-primary: #1c1c1c;
+  --text-secondary: #666666;
+  --bg-page: #f4f6fb;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: inherit;
+}

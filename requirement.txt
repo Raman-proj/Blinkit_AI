@@ -1,0 +1,99 @@
+AI Commerce Web App – Full Task List
+1. Frontend (Web App)
+Build a responsive web application
+Create a home page with:
+central search bar (text input)
+image upload option
+example prompts (spicy food, healthy snack, late night food)
+Create results section to display products
+Design product cards:
+product image
+name
+price
+category
+short AI explanation (“why recommended”)
+Add loading state (“AI is processing your request”)
+Make UI mobile friendly (PWA compatible layout)
+
+2. Backend API System
+Create backend server
+Build APIs:
+/search → handles both text queries
+/products → returns product database
+/image-search → handles uploaded images
+Connect frontend to backend APIs
+
+3. Product Database
+Create structured product dataset
+Each product contains:
+id
+name
+category
+price
+tags (spicy, healthy, snack, quick, etc.)
+Maintain 300–1000 sample products
+Organize into categories:
+snacks
+beverages
+instant food
+groceries
+healthy food
+
+4. AI Intent Understanding
+Take user input query
+Use LLM (Mistral 7B or equivalent) to extract intent
+Convert query into structured intent tags:
+spicy
+healthy
+snack
+quick meal
+light food
+Pass structured intent to retrieval system
+
+5. RAG + Retrieval System
+Convert product data into embeddings
+Store embeddings in vector database (FAISS or similar)
+Convert user intent into embedding
+Perform similarity search over product dataset
+Retrieve top matching products
+
+6. Ranking System
+Rank retrieved products using:
+semantic similarity score
+tag matching score (intent vs product tags)
+Return top 5–10 products
+Ensure results are relevant and diverse
+
+7. Explanation Layer
+For each product, generate short explanation:
+“Recommended because it matches spicy + snack preference”
+Make reasoning simple and readable
+
+8. User Memory System
+Store basic user interaction history:
+previous searches
+clicked products
+Use history to slightly adjust ranking
+Maintain simple session-based memory
+
+9. Image-Based Input System
+Allow users to upload images
+Convert image into embeddings using vision model (e.g., CLIP-style model)
+Match image embeddings with product embeddings
+Return visually similar products
+
+10. Final System Flow
+
+TEXT INPUT:
+User query → LLM intent extraction → embedding → vector search → ranking → results → UI
+
+IMAGE INPUT:
+Image → vision embedding → vector search → ranking → results → UI
+
+11. Output Goal (POC Demo)
+Fully working web app
+Search → instant product recommendations
+Image upload → similar product results
+Clear ranking logic visible
+Simple explanation per recommendation
+Fast, responsive UI
